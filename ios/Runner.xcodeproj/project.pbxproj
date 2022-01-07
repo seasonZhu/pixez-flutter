@@ -3,10 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00C8EECD2787C7540092873D /* WeissPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C8EECC2787C7540092873D /* WeissPlugin.swift */; };
+		00C8EECF2787C7660092873D /* Weiss.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C8EECE2787C7660092873D /* Weiss.xcframework */; };
+		00C8EED72787CADD0092873D /* HttpProxySession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C8EED12787CADD0092873D /* HttpProxySession.swift */; };
+		00C8EED82787CADD0092873D /* NSURLRequest+ProxyCanonicalRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C8EED22787CADD0092873D /* NSURLRequest+ProxyCanonicalRequest.m */; };
+		00C8EED92787CADD0092873D /* URLSessionConfiguration+HttpProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C8EED32787CADD0092873D /* URLSessionConfiguration+HttpProxy.swift */; };
+		00C8EEDA2787CADD0092873D /* HttpProxyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C8EED42787CADD0092873D /* HttpProxyProtocol.swift */; };
+		00C8EEDB2787CADD0092873D /* HttpProxyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C8EED62787CADD0092873D /* HttpProxyHandler.swift */; };
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
@@ -61,6 +68,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		00C8EECC2787C7540092873D /* WeissPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeissPlugin.swift; sourceTree = "<group>"; };
+		00C8EECE2787C7660092873D /* Weiss.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Weiss.xcframework; sourceTree = "<group>"; };
+		00C8EED12787CADD0092873D /* HttpProxySession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpProxySession.swift; sourceTree = "<group>"; };
+		00C8EED22787CADD0092873D /* NSURLRequest+ProxyCanonicalRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+ProxyCanonicalRequest.m"; sourceTree = "<group>"; };
+		00C8EED32787CADD0092873D /* URLSessionConfiguration+HttpProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLSessionConfiguration+HttpProxy.swift"; sourceTree = "<group>"; };
+		00C8EED42787CADD0092873D /* HttpProxyProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpProxyProtocol.swift; sourceTree = "<group>"; };
+		00C8EED52787CADD0092873D /* NSURLRequest+ProxyCanonicalRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+ProxyCanonicalRequest.h"; sourceTree = "<group>"; };
+		00C8EED62787CADD0092873D /* HttpProxyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpProxyHandler.swift; sourceTree = "<group>"; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
@@ -107,12 +122,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				D866EE375373955B58348C31 /* Pods_Runner.framework in Frameworks */,
+				00C8EECF2787C7660092873D /* Weiss.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00C8EED02787CADD0092873D /* HttpProxy */ = {
+			isa = PBXGroup;
+			children = (
+				00C8EED62787CADD0092873D /* HttpProxyHandler.swift */,
+				00C8EED42787CADD0092873D /* HttpProxyProtocol.swift */,
+				00C8EED12787CADD0092873D /* HttpProxySession.swift */,
+				00C8EED52787CADD0092873D /* NSURLRequest+ProxyCanonicalRequest.h */,
+				00C8EED22787CADD0092873D /* NSURLRequest+ProxyCanonicalRequest.m */,
+				00C8EED32787CADD0092873D /* URLSessionConfiguration+HttpProxy.swift */,
+			);
+			path = HttpProxy;
+			sourceTree = "<group>";
+		};
 		0490929A04F6A838565A4B4B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +209,8 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				00C8EED02787CADD0092873D /* HttpProxy */,
+				00C8EECE2787C7660092873D /* Weiss.xcframework */,
 				7CC54C3726103351009033DF /* Runner.entitlements */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
@@ -190,6 +221,7 @@
 				74858FAE1ED2DC5600515810 /* AppDelegate.swift */,
 				74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */,
 				A70B475625D4D94200AE0717 /* CodeGen.swift */,
+				00C8EECC2787C7540092873D /* WeissPlugin.swift */,
 				7CD2072C2610741D00677759 /* WidgetkitPlugin.swift */,
 				7C2A716C2765CF9A00B6BA48 /* DocumentPlugin.swift */,
 			);
@@ -384,12 +416,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C8EED92787CADD0092873D /* URLSessionConfiguration+HttpProxy.swift in Sources */,
 				7C8B5974260F680600098D5C /* SSSGridman.intentdefinition in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				7CD2072D2610741D00677759 /* WidgetkitPlugin.swift in Sources */,
 				7C2A716D2765CF9A00B6BA48 /* DocumentPlugin.swift in Sources */,
+				00C8EEDA2787CADD0092873D /* HttpProxyProtocol.swift in Sources */,
 				A70B475725D4D94200AE0717 /* CodeGen.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
+				00C8EED82787CADD0092873D /* NSURLRequest+ProxyCanonicalRequest.m in Sources */,
+				00C8EEDB2787CADD0092873D /* HttpProxyHandler.swift in Sources */,
+				00C8EECD2787C7540092873D /* WeissPlugin.swift in Sources */,
+				00C8EED72787CADD0092873D /* HttpProxySession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,7 +502,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
@@ -655,7 +693,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -704,7 +742,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;

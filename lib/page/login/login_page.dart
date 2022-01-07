@@ -162,6 +162,8 @@ class _LoginPageState extends State<LoginPage> {
 
   _launch(url) async {
     if (Platform.isIOS) {
+      await WeissPlugin.start();
+      await WeissPlugin.proxy();
       final result = await Leader.push(
           context,
           WebViewPage(
