@@ -26,6 +26,7 @@ import Photos
             self.receiveBatteryLevel(result: result,path: path ,delay: delay)
             
         })
+        WeissPlugin.bind(controller: controller)
         WidgetkitPlugin.bind(controller: controller)
         DocumentPlugin.bind(controller:controller)
         GeneratedPluginRegistrant.register(with: self)
