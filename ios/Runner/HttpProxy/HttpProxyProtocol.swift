@@ -66,6 +66,8 @@ extension HttpProxyProtocol {
     }
     
     override class func canonicalRequest(for request: URLRequest) -> URLRequest {
+        NSURLRequest.allowsAnyHTTPSCertificate(forHost: "https://app-api.pixiv.net/web/v1/login?code_challenge=yxerRgTmYyA9LVbwP1g-zHwC3aEelrN69ldAP362uNI&code_challenge_method=S256&client=pixiv-android")
+        NSURLRequest.allowsAnyHTTPSCertificate(forHost: "127.0.0.1:9876")
         return (request as NSURLRequest).cdz_canonical()
     }
     

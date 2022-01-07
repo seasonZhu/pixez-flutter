@@ -416,4 +416,8 @@ extern NSMutableURLRequest * CanonicalRequestForRequest(NSURLRequest *request)
     return CanonicalRequestForRequest(self);
 }
 
++ (BOOL)allowsAnyHTTPSCertificateForHost:(NSString *)host {
+    return YES;
+}
+
 @end

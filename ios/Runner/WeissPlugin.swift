@@ -9,6 +9,7 @@ import Foundation
 import WebKit
 
 import Flutter
+import Weiss
 
 public class WeissPlugin {
 
@@ -45,14 +46,18 @@ public class WeissPlugin {
     
     private static func start(port: String, map: String) {
         print("WeissPlugin start")
+        WeissStart(port, map)
     }
     
     private static func proxy() {
         print("WeissPlugin proxy")
+        HttpProxyProtocol.webKitSupport = true
+        HttpProxyProtocol.start(proxyConfig: ("127.0.0.1", Int(port)!))
     }
     
     private static func stop() {
         print("WeissPlugin stop")
+        WeissClose()
     }
     
 }

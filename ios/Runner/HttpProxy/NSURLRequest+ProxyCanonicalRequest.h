@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSURLRequest *)cdz_canonicalRequest;
 
++ (BOOL)allowsAnyHTTPSCertificateForHost:(NSString *)host;
+
 @end
 
 NS_ASSUME_NONNULL_END
