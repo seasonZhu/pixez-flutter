@@ -236,6 +236,12 @@ flutter clean
 
 根据我目前review code的情况看，这个App其实主要还是针对安卓端做了适配，其实针对iOS的优化还是比较薄弱的，我尽可能的进行修复吧。
 
+### 有关WKWebView使用代理的问题
+
+https://nemocdz.github.io/post/ios-%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86proxy%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/
+
+https://python.iitter.com/other/223857.html
+
 ### 本FAQ被以下人数阅读,谢谢你们的配合:)
 
 ![:PixezFAQ](https://count.getloli.com/get/@:PixezFAQ?theme=rule34)
